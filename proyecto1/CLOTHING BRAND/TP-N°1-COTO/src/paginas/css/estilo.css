@@ -1,0 +1,234 @@
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    color: #2c3e50; 
+    background-color:antiquewhite; 
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: hsl(34, 15%, 91%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    position: sticky; /* La cabecera se mantiene visible al hacer scroll */
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: #000;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar form {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-bar form:focus-within {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar input[type="search"] {
+    border: none;
+    padding: 0.7rem 1.5rem;
+    outline: none;
+    background-color: transparent;
+    font-size: 0.9rem;
+    width: 200px;
+}
+
+.search-bar button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 0.7rem 1rem;
+    border-radius: 0 50px 50px 0;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #333;
+}
+
+/* Estilos de la sección principal (Hero) */
+#inicio {
+    background-color: antiquewhite;
+    padding: 10rem 2rem;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+/* Estilos de la galería de productos */
+#coleccion {
+    text-align: center;
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#coleccion h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.product-item {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.product-item h3 {
+    margin: 1.5rem 0 0.5rem;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.product-item p {
+    color: #777;
+    font-size: 0.9rem;
+    padding: 0 1rem 1.5rem;
+}
+
+/* Estilos de las secciones de 'Nosotros' y 'Contacto' */
+#nosotros {
+    padding: 4rem 2rem;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+}
+
+#nosotros h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#nosotros p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.about-logo {
+    width: 120px;
+    margin-top: 2rem;
+}
+
+#contacto {
+    background-color: #333;
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#contacto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-media a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #ccc;
+}
