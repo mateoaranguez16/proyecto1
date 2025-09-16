@@ -12,7 +12,7 @@ header {
     background-color: hsl(34, 15%, 91%);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 1rem 0;
-    position: sticky; /* La cabecera se mantiene visible al hacer scroll */
+    position: sticky;
     top: 0;
     z-index: 1000;
 }
@@ -185,7 +185,7 @@ nav ul li a:hover {
     padding: 0 1rem 1.5rem;
 }
 
-/* Estilos de las secciones de 'Nosotros' y 'Contacto' */
+
 #nosotros {
     padding: 4rem 2rem;
     text-align: center;
@@ -231,4 +231,28 @@ nav ul li a:hover {
 
 .social-media a:hover {
     color: #ccc;
+}
+
+.filtros button {
+    padding: 12px 25px;
+    margin: 5px;
+    border: 2px solid #e63946;
+    background-color: #fff;
+    color: #e63946;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filtros button:hover {
+    background-color: #e63946;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.filtros button.active {
+    background-color: #e63946;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
 }
