@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Clothing Brand</title>
+  <link rel="stylesheet" href="src/pages/css/hablarconagenteenvivo.css">
+  <link rel="icon" href="src/icon/iconopagina.png">
+</head>
+<body>
+
+  <!-- 🔹 NAV -->
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img src="src/icon/iconopagina.png" alt="Logo de la marca"></a>
+      </div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="coleccion.html">Colección</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="search-bar">
+        <form action="#" method="get">
+          <input type="search" placeholder="Buscar productos..." name="search">
+          <button id="button-search" type="submit"><img src="src/icon/iconobuscar.png" alt="" width="20"></button>
+        </form>
+      </div>
+
+      <!-- 🔹 ICONOS DE USUARIO Y CARRITO -->
+      <div class="nav-icons">
+        <div id="user-profile">
+          <img src="src/icon/perfil.png" alt="Perfil" width="28" title="Perfil de usuario">
+        </div>
+        <div id="user-menu" style="display:none; position:absolute; background:#fff; border:1px solid #ccc; padding:10px; box-shadow:0 2px 5px rgba(0,0,0,0.2); z-index:100;">
+          <ul style="list-style:none; margin:0; padding:0;">
+            <li><a href="perfil.html" style="text-decoration:none; color:#333; display:block; padding:5px 10px;">Perfil</a></li>
+            <li><a href="src/pages/php/logout.php" style="text-decoration:none; color:#333; display:block; padding:5px 10px;">Cerrar sesión</a></li>
+          </ul>
+        </div>
+        <div id="cart-icon">
+          <img src="src/icon/carritodecompras.png" alt="Carrito de compras" width="28" title="Carrito">
+          <span id="cart-count">0</span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 🔹 SECCIÓN CONSULTA -->
+  <div class="container-consulta">
+    <h1 class="consulta-title">Enviar Consulta</h1>
+    <form id="consulta-form">
+      <label for="tipo_consulta">Tipo de consulta</label>
+      <select id="tipo_consulta" name="tipo_consulta" required>
+        <option value="" disabled selected>Selecciona tipo de consulta</option>
+        <option value="Producto">Producto</option>
+        <option value="Envío">Envío</option>
+        <option value="Pago">Pago</option>
+        <option value="Otro">Otro</option>
+      </select>
+
+      <label for="descripcion">Descripción de la consulta</label>
+      <textarea id="descripcion" name="descripcion" rows="5" placeholder="Escribe aquí tu consulta..." required></textarea>
+
+      <div class="consulta-buttons">
+        <button type="button" id="btnEnviar">Enviar Consulta</button>
+        <button type="button" id="btnChatAgente">Hablar con un agente en vivo</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- 🔹 MODAL SELECCIÓN SERVICIO DE CORREO -->
+  <div id="modalOverlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+    <div class="modal-content">
+      <h2 id="modalTitle">Selecciona el servicio de correo</h2>
+      <button data-service="gmail">Enviar con Gmail</button>
+      <button data-service="outlook">Enviar con Outlook</button>
+      <button data-service="yahoo">Enviar con Yahoo</button>
+      <button id="closeModal" class="close-btn">Cancelar</button>
+    </div>
+  </div>
+
+  <!-- 🔹 FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col brand-info">
+        <img src="src/icon/iconopagina.png" alt="Logo de la marca" class="footer-logo">
+        <p>Elegancia y estilo en cada prenda. Inspirados en la autenticidad, diseñamos ropa para destacar tu personalidad.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Enlaces rápidos</h3>
+        <ul>
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="index.html#coleccion">Colección</a></li>
+          <li><a href="index.html#nosotros">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Atención al cliente</h3>
+        <ul>
+          <li><a href="#">Preguntas frecuentes</a></li>
+          <li><a href="#">Envíos y devoluciones</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Conéctate con nosotros</h3>
+        <div class="social-icons">
+          <a href="#"><img src="src/icon/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="src/icon/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="src/icon/twitter.png" alt="Twitter"></a>
+        </div>
+        <p class="footer-mail">📧 info@marcaropa.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Marca Ropa. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- 🔹 SCRIPTS -->
+  <script src="src/pages/js/hablarconagenteenvivo.js"></script>
+  <script src="src/pages/js/scripts.js"></script>
+
+  <!-- 🔹 CARRITO DE COMPRAS -->
+  <div id="cart-popup" class="hidden">
+    <h3>🛒 Carrito de Compras</h3>
+    <ul id="cart-items"></ul>
+    <div class="envio-section">
+      <label for="direccion">Dirección de envío:</label>
+      <input type="text" id="direccion" placeholder="Ingresa tu dirección">
+      <button id="calcular-envio">Calcular envío</button>
+      <p id="costo-envio">Costo de envío: $0</p>
+    </div>
+    <p>Total: <span id="cart-total">$0</span></p>
+    <button id="ir-a-pagar">Ir a pagar</button>
+  </div>
+
+  <!-- 🔹 MENÚ USUARIO -->
+  <script>
+    const userProfile = document.getElementById('user-profile');
+    const userMenu = document.getElementById('user-menu');
+
+    // Posicionar el menú debajo del icono
+    function positionMenu() {
+      const rect = userProfile.getBoundingClientRect();
+      userMenu.style.top = rect.bottom + window.scrollY + 'px';
+      userMenu.style.left = rect.left + window.scrollX + 'px';
+    }
+
+    userProfile.addEventListener('click', () => {
+      if (userMenu.style.display === 'none' || userMenu.style.display === '') {
+        positionMenu();
+        userMenu.style.display = 'block';
+      } else {
+        userMenu.style.display = 'none';
+      }
+    });
+
+    // Ocultar menú al hacer click fuera
+    document.addEventListener('click', (e) => {
+      if (!userProfile.contains(e.target) && !userMenu.contains(e.target)) {
+        userMenu.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>

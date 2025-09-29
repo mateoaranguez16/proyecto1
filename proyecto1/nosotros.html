@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros - Clothing Brand</title>
+  <link rel="stylesheet" href="src/pages/css/nosotros.css">
+  <link rel="icon" href="src/icon/iconopagina.png">
+</head>
+<body>
+
+  <!-- 🔹 NAVBAR -->
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img src="src/icon/iconopagina.png" alt="Logo de la marca"></a>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="coleccion.html">Colección</a></li>
+        <li><a href="nosotros.html" class="active">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <div class="search-bar">
+        <form action="#" method="get">
+          <input type="search" name="search" placeholder="Buscar productos...">
+          <button type="submit"><img src="src/icon/iconobuscar.png" alt="Buscar" width="20"></button>
+        </form>
+      </div>
+
+      <div class="nav-icons" style="position: relative;">
+        <!-- Icono de perfil -->
+        <div id="user-profile">
+          <img src="src/icon/perfil.png" alt="Perfil" width="28" title="Perfil de usuario">
+        </div>
+
+        <!-- Menú desplegable -->
+        <div id="user-menu" class="dropdown-menu">
+          <ul>
+            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="src/pages/php/logout.php">Cerrar sesión</a></li>
+          </ul>
+        </div>
+
+        <!-- Carrito -->
+        <div id="cart-icon">
+          <img src="src/icon/carritodecompras.png" alt="Carrito" width="28" title="Carrito">
+          <span id="cart-count">0</span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 🔹 SECCIÓN NOSOTROS -->
+  <main id="nosotros">
+
+    <!-- Historia -->
+    <section class="historia nosotros-container">
+      <div class="nosotros-texto">
+        <h2>Nuestra Historia</h2>
+        <p>Desde nuestros inicios, en <strong>Marca Ropa</strong> hemos buscado combinar estilo, comodidad y autenticidad en cada prenda. Cada colección nace de la pasión por la moda y el compromiso con la calidad.</p>
+        <p>Comenzamos con un pequeño taller y hoy contamos con un equipo de diseñadores, artesanos y creativos que trabajan para ofrecer experiencias únicas a nuestros clientes.</p>
+      </div>
+      <div class="nosotros-imagen">
+        <img src="src/img/historia.png" alt="Historia de Marca Ropa">
+      </div>
+    </section>
+
+    <!-- Misión y Visión -->
+    <section class="mision-vision nosotros-container">
+      <div class="mision">
+        <h3>Misión</h3>
+        <p>Crear ropa de alta calidad que permita a nuestros clientes expresar su personalidad y sentirse cómodos en cualquier ocasión, siempre con respeto por la sostenibilidad.</p>
+      </div>
+      <div class="vision">
+        <h3>Visión</h3>
+        <p>Ser reconocidos como una marca innovadora y confiable, que inspire confianza y estilo, y que deje una huella positiva en la industria de la moda.</p>
+      </div>
+    </section>
+
+    <!-- Valores -->
+    <section class="valores nosotros-container">
+      <h2>Valores que nos definen</h2>
+      <div class="valores-grid">
+        <div class="valor">
+          <h4>Calidad</h4>
+          <p>Nos aseguramos de que cada prenda cumpla con los más altos estándares de calidad.</p>
+        </div>
+        <div class="valor">
+          <h4>Innovación</h4>
+          <p>Buscamos siempre nuevas tendencias y diseños para ofrecer productos únicos.</p>
+        </div>
+        <div class="valor">
+          <h4>Compromiso</h4>
+          <p>Nos comprometemos con nuestros clientes, equipo y con la sostenibilidad.</p>
+        </div>
+        <div class="valor">
+          <h4>Autenticidad</h4>
+          <p>Cada prenda refleja la identidad y personalidad de quien la usa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipo -->
+    <section class="equipo nosotros-container">
+      <h2>Conoce a nuestro equipo</h2>
+      <div class="equipo-grid">
+        <div class="miembro">
+          <img src="src/img/persona1.png" alt="Juan Pérez">
+          <h4>Juan Pérez</h4>
+          <p>Diseñador Principal</p>
+        </div>
+        <div class="miembro">
+          <img src="src/img/persona2.png" alt="María López">
+          <h4>María López</h4>
+          <p>Coordinadora de Producción</p>
+        </div>
+        <div class="miembro">
+          <img src="src/img/persona3.png" alt="Carlos Díaz">
+          <h4>Carlos Díaz</h4>
+          <p>Marketing & Estrategia</p>
+        </div>
+        <div class="miembro">
+          <img src="src/img/persona4.png" alt="Laura Gómez">
+          <h4>Laura Gómez</h4>
+          <p>Atención al Cliente</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 🔹 FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col brand-info">
+        <img src="src/icon/iconopagina.png" alt="Logo de la marca" class="footer-logo">
+        <p>Elegancia y estilo en cada prenda. Inspirados en la autenticidad, diseñamos ropa para destacar tu personalidad.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Enlaces rápidos</h3>
+        <ul>
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="index.html#coleccion">Colección</a></li>
+          <li><a href="index.html#nosotros">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Atención al cliente</h3>
+        <ul>
+          <li><a href="#">Preguntas frecuentes</a></li>
+          <li><a href="#">Envíos y devoluciones</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Conéctate con nosotros</h3>
+        <div class="social-icons">
+          <a href="#"><img src="src/icon/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="src/icon/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="src/icon/twitter.png" alt="Twitter"></a>
+        </div>
+        <p class="footer-mail">📧 info@marcaropa.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Marca Ropa. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- 🔹 CHATBOT -->
+  <div id="chatbot-btn">💬</div>
+  <div id="chatbot">
+    <div class="chat-header">
+      <span>Asistente Virtual</span>
+      <button id="close-chat">✖</button>
+    </div>
+    <div class="chat-body" id="chat-body"></div>
+    <div class="chat-footer">
+      <input type="text" id="user-input" placeholder="Escribe aquí..." />
+      <button id="send-btn">➤</button>
+    </div>
+  </div>
+
+  <!-- 🔹 CARRITO -->
+  <div id="cart-popup" class="hidden">
+    <h3>🛒 Carrito de Compras</h3>
+    <ul id="cart-items"></ul>
+    <div class="envio-section">
+      <label for="direccion">Dirección de envío:</label>
+      <input type="text" id="direccion" placeholder="Ingresa tu dirección">
+      <button id="calcular-envio">Calcular envío</button>
+      <p id="costo-envio">Costo de envío: $0</p>
+    </div>
+    <p>Total: <span id="cart-total">$0</span></p>
+    <button id="ir-a-pagar">Ir a pagar</button>
+  </div>
+
+  <script src="src/pages/js/scripts.js"></script>
+  <script>
+    // Menú de usuario
+    const userProfile = document.getElementById('user-profile');
+    const userMenu = document.getElementById('user-menu');
+
+    userProfile.addEventListener('click', (e) => {
+      e.stopPropagation(); // Evita que el click se propague y cierre inmediatamente
+      userMenu.style.display = userMenu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', () => {
+      userMenu.style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>
