@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <!-- 🔹 NAV -->
+
   <header>
     <nav>
       <div class="logo">
@@ -28,7 +28,7 @@
         </form>
       </div>
 
-      <!-- 🔹 ICONOS DE USUARIO Y CARRITO -->
+     
       <div class="nav-icons">
         <div id="user-profile">
           <img src="src/icon/perfil.png" alt="Perfil" width="28" title="Perfil de usuario">
@@ -47,7 +47,7 @@
     </nav>
   </header>
 
-  <!-- 🔹 SECCIÓN CONSULTA -->
+  
   <div class="container-consulta">
     <h1 class="consulta-title">Enviar Consulta</h1>
     <form id="consulta-form">
@@ -70,7 +70,7 @@
     </form>
   </div>
 
-  <!-- 🔹 MODAL SELECCIÓN SERVICIO DE CORREO -->
+  
   <div id="modalOverlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
     <div class="modal-content">
       <h2 id="modalTitle">Selecciona el servicio de correo</h2>
@@ -81,7 +81,7 @@
     </div>
   </div>
 
-  <!-- 🔹 FOOTER -->
+
   <footer>
     <div class="footer-container">
       <div class="footer-col brand-info">
@@ -121,11 +121,11 @@
     </div>
   </footer>
 
-  <!-- 🔹 SCRIPTS -->
+
   <script src="src/pages/js/hablarconagenteenvivo.js"></script>
   <script src="src/pages/js/scripts.js"></script>
 
-  <!-- 🔹 CARRITO DE COMPRAS -->
+
   <div id="cart-popup" class="hidden">
     <h3>🛒 Carrito de Compras</h3>
     <ul id="cart-items"></ul>
@@ -139,12 +139,12 @@
     <button id="ir-a-pagar">Ir a pagar</button>
   </div>
 
-  <!-- 🔹 MENÚ USUARIO -->
+  
   <script>
     const userProfile = document.getElementById('user-profile');
     const userMenu = document.getElementById('user-menu');
 
-    // Posicionar el menú debajo del icono
+    
     function positionMenu() {
       const rect = userProfile.getBoundingClientRect();
       userMenu.style.top = rect.bottom + window.scrollY + 'px';
@@ -160,7 +160,7 @@
       }
     });
 
-    // Ocultar menú al hacer click fuera
+     
     document.addEventListener('click', (e) => {
       if (!userProfile.contains(e.target) && !userMenu.contains(e.target)) {
         userMenu.style.display = 'none';

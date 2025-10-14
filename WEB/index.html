@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clothing Brand - Elegancia y Estilo</title>
 
-    <!-- Estilos principales -->
+     
     <link rel="stylesheet" href="src/pages/css/style.css">
 
-    <!-- Icono de la página -->
+   
     <link rel="icon" href="src/icon/iconopagina.png">
 </head>
 <body>
 
-    <!-- Header y navegación principal -->
+   
     <header>
         <nav>
-            <!-- Logo -->
+       
             <div class="logo">
                 <a href="index.html"><img src="src/icon/iconopagina.png" alt="Logo de la marca"></a>
             </div>
 
-            <!-- Menú principal -->
+            
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="coleccion.html">Colección</a></li>
@@ -29,7 +29,7 @@
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
 
-            <!-- Barra de búsqueda -->
+          
             <div class="search-bar">
                 <form action="#" method="get">
                     <input type="search" name="search" placeholder="Buscar productos...">
@@ -39,15 +39,15 @@
                 </form>
             </div>
 
-            <!-- Iconos de usuario y carrito -->
+         
             <div class="nav-icons">
 
-                <!-- Perfil de usuario -->
+               
                 <div id="user-profile">
                     <img src="src/icon/perfil.png" alt="Perfil" width="28" title="Perfil de usuario">
                 </div>
 
-                <!-- Menú desplegable de usuario -->
+               
                 <div id="user-menu" style="display:none; position:absolute; background:#fff; border:1px solid #ccc; padding:10px; box-shadow:0 2px 5px rgba(0,0,0,0.2); z-index:100;">
                     <ul style="list-style:none; margin:0; padding:0;">
                         <li><a href="perfil.html" style="text-decoration:none; color:#333; display:block; padding:5px 10px;">Perfil</a></li>
@@ -55,7 +55,7 @@
                     </ul>
                 </div>
 
-                <!-- Carrito de compras -->
+            
                 <div id="cart-icon">
                     <img src="src/icon/carritodecompras.png" alt="Carrito de compras" width="28" title="Carrito">
                     <span id="cart-count">0</span>
@@ -64,7 +64,7 @@
         </nav>
     </header>
 
-    <!-- Sección principal / Hero -->
+ 
     <section id="inicio">
         <div class="hero-content">
             <h1>Elegancia y Estilo para tu Día a Día</h1>
@@ -73,7 +73,7 @@
         </div>
     </section>
 
-    <!-- Sección Historia -->
+  
     <section id="historia">
         <div class="historia-container">
             <div class="historia-text">
@@ -88,23 +88,23 @@
         </div>
     </section>
 
-    <!-- Sección Filosofía / Nosotros -->
+    
     <section id="nosotros">
         <h2>Nuestra Filosofía</h2>
         <p>Somos una marca que cree en la autenticidad y la calidad. Cada prenda está diseñada para ofrecer comodidad y estilo, reflejando una personalidad fuerte y libre.</p>
         <img src="src/icon/iconopagina.png" alt="Logo de la marca" class="about-logo">
     </section>
 
-    <!-- Footer -->
+ 
     <footer>
         <div class="footer-container">
-            <!-- Información de la marca -->
+             
             <div class="footer-col brand-info">
                 <img src="src/icon/iconopagina.png" alt="Logo de la marca" class="footer-logo">
                 <p>Elegancia y estilo en cada prenda. Inspirados en la autenticidad, diseñamos ropa para destacar tu personalidad.</p>
             </div>
 
-            <!-- Enlaces rápidos -->
+           
             <div class="footer-col">
                 <h3>Enlaces rápidos</h3>
                 <ul>
@@ -115,7 +115,7 @@
                 </ul>
             </div>
 
-            <!-- Atención al cliente -->
+          
             <div class="footer-col">
                 <h3>Atención al cliente</h3>
                 <ul>
@@ -126,7 +126,7 @@
                 </ul>
             </div>
 
-            <!-- Redes sociales -->
+     
             <div class="footer-col">
                 <h3>Conéctate con nosotros</h3>
                 <div class="social-icons">
@@ -143,10 +143,10 @@
         </div>
     </footer>
 
-    <!-- Botón de Chatbot -->
+   
     <div id="chatbot-btn">💬</div>
 
-    <!-- Chatbot -->
+   
     <div id="chatbot">
         <div class="chat-header">
             <span>Asistente Virtual</span>
@@ -159,7 +159,7 @@
         </div>
     </div>
 
-    <!-- Popup del carrito de compras -->
+     
     <div id="cart-popup" class="hidden">
         <h3>🛒 Carrito de Compras</h3>
         <ul id="cart-items"></ul>
@@ -175,22 +175,22 @@
         <button id="ir-a-pagar">Ir a pagar</button>
     </div>
 
-    <!-- Scripts externos -->
+  
     <script src="src/pages/js/scripts.js"></script>
 
-    <!-- Script para menú de usuario -->
+    
     <script>
         const userProfile = document.getElementById('user-profile');
         const userMenu = document.getElementById('user-menu');
 
-        // Función para posicionar el menú debajo del icono
+         
         function positionMenu() {
             const rect = userProfile.getBoundingClientRect();
             userMenu.style.top = rect.bottom + window.scrollY + 'px';
             userMenu.style.left = rect.left + window.scrollX + 'px';
         }
 
-        // Mostrar/ocultar menú al hacer click en el perfil
+         
         userProfile.addEventListener('click', () => {
             if (userMenu.style.display === 'none' || userMenu.style.display === '') {
                 positionMenu();
@@ -200,7 +200,7 @@
             }
         });
 
-        // Ocultar menú al hacer click fuera
+         
         document.addEventListener('click', (e) => {
             if (!userProfile.contains(e.target) && !userMenu.contains(e.target)) {
                 userMenu.style.display = 'none';

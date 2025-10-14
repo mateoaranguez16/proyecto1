@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <!-- 🔹 NAV -->
+  
   <header>
     <nav>
       <div class="logo">
@@ -61,7 +61,7 @@
 </div>
 
 
-  <!-- 🔹 FOOTER -->
+ 
   <footer>
     <div class="footer-container">
       <div class="footer-col brand-info">
@@ -123,7 +123,7 @@
   const userProfile = document.getElementById('user-profile');
   const userMenu = document.getElementById('user-menu');
 
-  // Posicionar el menú debajo del icono
+   
   function positionMenu() {
     const rect = userProfile.getBoundingClientRect();
     userMenu.style.top = rect.bottom + window.scrollY + 'px';
@@ -139,7 +139,7 @@
     }
   });
 
-  // Ocultar menú al hacer click fuera
+   
   document.addEventListener('click', (e) => {
     if (!userProfile.contains(e.target) && !userMenu.contains(e.target)) {
       userMenu.style.display = 'none';

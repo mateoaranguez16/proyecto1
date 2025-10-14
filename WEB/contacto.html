@@ -5,23 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto - Clothing Brand</title>
 
-  <!-- Estilos de la página de contacto -->
+  
   <link rel="stylesheet" href="src/pages/css/contacto.css">
 
-  <!-- Icono de la página -->
+
   <link rel="icon" href="src/icon/iconopagina.png">
 </head>
 <body>
 
-  <!-- ===================== NAV ===================== -->
+ 
   <header>
     <nav>
-      <!-- Logo -->
+     
       <div class="logo">
         <a href="index.html"><img src="src/icon/iconopagina.png" alt="Logo de la marca"></a>
       </div>
 
-      <!-- Menú principal -->
+      
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="coleccion.html">Colección</a></li>
@@ -29,7 +29,7 @@
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
 
-      <!-- Barra de búsqueda -->
+      
       <div class="search-bar">
         <form action="#" method="get">
           <input type="search" name="search" placeholder="Buscar productos...">
@@ -39,14 +39,13 @@
         </form>
       </div>
 
-      <!-- Iconos de usuario y carrito -->
+      
       <div class="nav-icons">
-        <!-- Perfil de usuario -->
         <div id="user-profile">
           <img src="src/icon/perfil.png" alt="Perfil" width="28" title="Perfil de usuario">
         </div>
 
-        <!-- Menú desplegable de usuario -->
+       
         <div id="user-menu" style="display:none; position:absolute; background:#fff; border:1px solid #ccc; padding:10px; box-shadow:0 2px 5px rgba(0,0,0,0.2); z-index:100;">
           <ul style="list-style:none; margin:0; padding:0;">
             <li><a href="perfil.html" style="text-decoration:none; color:#333; display:block; padding:5px 10px;">Perfil</a></li>
@@ -54,7 +53,7 @@
           </ul>
         </div>
 
-        <!-- Carrito de compras -->
+        
         <div id="cart-icon">
           <img src="src/icon/carritodecompras.png" alt="Carrito de compras" width="28" title="Carrito">
           <span id="cart-count">0</span>
@@ -63,12 +62,12 @@
     </nav>
   </header>
 
-  <!-- ===================== SECCIÓN CONTACTO ===================== -->
+
   <section id="contacto-page">
     <h1>Contáctanos</h1>
     <p>Estamos aquí para ayudarte. Escríbenos por correo, llámanos o visítanos en nuestra tienda.</p>
 
-    <!-- Información de contacto -->
+   
     <div class="contact-info">
       <div class="info-box">
         <h3>📞 Teléfono</h3>
@@ -84,13 +83,13 @@
       </div>
     </div>
 
-    <!-- Mapa -->
+ 
     <div class="map-container">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.002595324593!2d-58.38155968477177!3d-34.60368498045983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac9f0c6fbed%3A0x3e4b6e5b1f7a9e!2sBuenos%20Aires%20Obelisco!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar"
         width="100%" height="400" style="border:0;" allowfullscreen loading="lazy"></iframe>
     </div>
 
-    <!-- Formulario de contacto -->
+    
     <div class="form-container">
       <h2>Envíanos un mensaje</h2>
       <form action="mailto:info@marcaropa.com" method="post" enctype="text/plain">
@@ -103,7 +102,7 @@
     </div>
   </section>
 
-  <!-- ===================== FOOTER ===================== -->
+ 
   <footer>
     <div class="footer-container">
       <div class="footer-col brand-info">
@@ -143,7 +142,7 @@
     </div>
   </footer>
 
-  <!-- ===================== CHATBOT ===================== -->
+
   <div id="chatbot-btn">💬</div>
   <div id="chatbot">
     <div class="chat-header">
@@ -157,7 +156,7 @@
     </div>
   </div>
 
-  <!-- ===================== CARRITO ===================== -->
+  
   <div id="cart-popup" class="hidden">
     <h3>🛒 Carrito de Compras</h3>
     <ul id="cart-items"></ul>
@@ -173,11 +172,11 @@
     <button id="ir-a-pagar">Ir a pagar</button>
   </div>
 
-  <!-- ===================== SCRIPTS ===================== -->
+  
   <script src="src/pages/js/scripts.js"></script>
 
   <script>
-    // ===================== MENÚ USUARIO =====================
+   
     const userProfile = document.getElementById('user-profile');
     const userMenu = document.getElementById('user-menu');
 
@@ -192,7 +191,7 @@
     });
 
    
-   // Ocultar menú al hacer click fuera
+  
     document.addEventListener('click', (e) => {
       if (!userProfile.contains(e.target) && !userMenu.contains(e.target)) {
         userMenu.style.display = 'none';

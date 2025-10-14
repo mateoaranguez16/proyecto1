@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <!-- 🔹 NAVBAR -->
+  
   <header>
     <nav>
       <div class="logo">
@@ -31,12 +31,12 @@
       </div>
 
       <div class="nav-icons" style="position: relative;">
-        <!-- Icono de perfil -->
+       
         <div id="user-profile">
           <img src="src/icon/perfil.png" alt="Perfil" width="28" title="Perfil de usuario">
         </div>
 
-        <!-- Menú desplegable -->
+        
         <div id="user-menu" class="dropdown-menu">
           <ul>
             <li><a href="perfil.html">Perfil</a></li>
@@ -44,7 +44,7 @@
           </ul>
         </div>
 
-        <!-- Carrito -->
+         
         <div id="cart-icon">
           <img src="src/icon/carritodecompras.png" alt="Carrito" width="28" title="Carrito">
           <span id="cart-count">0</span>
@@ -53,10 +53,10 @@
     </nav>
   </header>
 
-  <!-- 🔹 SECCIÓN NOSOTROS -->
+  
   <main id="nosotros">
 
-    <!-- Historia -->
+     
     <section class="historia nosotros-container">
       <div class="nosotros-texto">
         <h2>Nuestra Historia</h2>
@@ -68,7 +68,7 @@
       </div>
     </section>
 
-    <!-- Misión y Visión -->
+   
     <section class="mision-vision nosotros-container">
       <div class="mision">
         <h3>Misión</h3>
@@ -80,7 +80,7 @@
       </div>
     </section>
 
-    <!-- Valores -->
+ 
     <section class="valores nosotros-container">
       <h2>Valores que nos definen</h2>
       <div class="valores-grid">
@@ -103,7 +103,7 @@
       </div>
     </section>
 
-    <!-- Equipo -->
+    
     <section class="equipo nosotros-container">
       <h2>Conoce a nuestro equipo</h2>
       <div class="equipo-grid">
@@ -147,7 +147,7 @@
 
   </main>
 
-  <!-- 🔹 FOOTER -->
+   
   <footer>
     <div class="footer-container">
       <div class="footer-col brand-info">
@@ -187,7 +187,7 @@
     </div>
   </footer>
 
-  <!-- 🔹 CHATBOT -->
+  
   <div id="chatbot-btn">💬</div>
   <div id="chatbot">
     <div class="chat-header">
@@ -201,7 +201,7 @@
     </div>
   </div>
 
-  <!-- 🔹 CARRITO -->
+  
   <div id="cart-popup" class="hidden">
     <h3>🛒 Carrito de Compras</h3>
     <ul id="cart-items"></ul>
@@ -217,12 +217,12 @@
 
   <script src="src/pages/js/scripts.js"></script>
   <script>
-    // Menú de usuario
+     
     const userProfile = document.getElementById('user-profile');
     const userMenu = document.getElementById('user-menu');
 
     userProfile.addEventListener('click', (e) => {
-      e.stopPropagation(); // Evita que el click se propague y cierre inmediatamente
+      e.stopPropagation();  
       userMenu.style.display = userMenu.style.display === 'block' ? 'none' : 'block';
     });
 

@@ -6,7 +6,7 @@
     <title>Página de Pago - Marca Ropa</title>
     <link rel="stylesheet" href="src/pages/css/pago.css" />
     <style>
-      /* Solo agregué para que los formularios se oculten cuando no están activos */
+      
       .payment-form { display: none; margin-top: 1rem; }
       .payment-form.active { display: block; }
       .payment-methods button.active { background-color: #007bff; color: white; }
@@ -52,20 +52,20 @@
   <h1>Pago</h1>
 
   <div class="payment-section">
-    <!-- Resumen de la compra -->
+  
     <h2>Resumen de tu compra</h2>
     <ul id="resumen-carrito"></ul>
     <p>Dirección: <span id="mostrar-direccion"></span></p>
     <p>Total a pagar: <span id="total-pagar"></span></p>
 
-    <!-- Opciones de método de pago -->
+   
     <div class="payment-methods">
       <button id="btn-tarjeta" class="active">Tarjeta de Débito</button>
       <button id="btn-transferencia">Transferencia Bancaria</button>
       <button id="btn-efectivo">Efectivo</button>
     </div>
 
-    <!-- Formulario Tarjeta de Débito -->
+     
     <form id="form-tarjeta" class="payment-form active" novalidate>
       <label for="titular">Nombre del titular</label>
       <input type="text" id="titular" name="titular" placeholder="Nombre completo" required>
@@ -77,7 +77,7 @@
       <button type="submit" class="submit-btn" style="margin-top: 15px;">Pagar</button>
     </form>
 
-    <!-- Formulario Transferencia Bancaria -->
+     
     <form id="form-transferencia" class="payment-form" novalidate>
       <label>Cuenta bancaria para transferir:</label>
       <p style="font-weight: 700; margin-bottom: 8px;">tiendagood.mp</p>
@@ -98,7 +98,7 @@
       </div>
     </form>
 
-    <!-- Información Efectivo -->
+   
     <div id="form-efectivo" class="payment-form">
       <label>Dirección para pago en efectivo</label>
       <p>Por favor, dirígete a nuestro local para abonar tu compra en efectivo.</p>
@@ -150,7 +150,7 @@
 <script src="https://js.stripe.com/v3/"></script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  // Mostrar resumen carrito y dirección
+  
   const resumenCarrito = document.getElementById("resumen-carrito");
   const mostrarDireccion = document.getElementById("mostrar-direccion");
   const totalPagar = document.getElementById("total-pagar");
@@ -186,16 +186,14 @@ document.addEventListener("DOMContentLoaded", () => {
     total += item.price * item.quantity;
   });
 
-  // Mostrar total con envío
+  
   let totalFinal = total + envioCosto;
   totalPagar.innerHTML = `
     $${totalFinal.toLocaleString()} <br>
     <small style="color:#555;">(Incluye envío: $${envioCosto.toLocaleString()})</small>
   `;
 
-  // --- Resto del código (Stripe, transferencia, efectivo) se queda igual ---
   
-  // Cambiar formularios según método de pago
   const btnTarjeta = document.getElementById('btn-tarjeta');
   const btnTransferencia = document.getElementById('btn-transferencia');
   const btnEfectivo = document.getElementById('btn-efectivo');
@@ -228,7 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
   btnTransferencia.addEventListener('click', () => activarMetodo('transferencia'));
   btnEfectivo.addEventListener('click', () => activarMetodo('efectivo'));
 
-  // Stripe para tarjeta de débito (se mantiene igual)
+   
   const stripe = Stripe('pk_test_51IEnfaCHkJiU0TeUQkOEmQfYTNlB1AkIbD9XnNfIYPyWq7xlGL2hVaWwMqcPpF22guqh5msRdxF32USdNKSms9Oo00SqhZR2wa');
   const elements = stripe.elements();
   const cardElement = elements.create('card');
@@ -260,7 +258,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Resto de transferencia, efectivo y menú perfil (igual que antes)
+   
 });
 </script>
 

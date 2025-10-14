@@ -114,7 +114,7 @@
     const mostrarDireccion = document.getElementById("mostrar-direccion");
     const totalPagar = document.getElementById("total-pagar");
 
-    // Leer carrito y dirección guardados en localStorage
+    
     const carritoGuardado = JSON.parse(localStorage.getItem("carrito")) || [];
     const direccion = localStorage.getItem("direccion") || "";
 
@@ -129,7 +129,7 @@
         const img = document.createElement("img");
         img.src = item.img;
         img.alt = item.name;
-        img.style.width = "60px"; // Ajusta tamaño a tu gusto
+        img.style.width = "60px";  
         img.style.height = "60px";
         img.style.objectFit = "cover";
         img.style.marginRight = "10px";
@@ -165,7 +165,7 @@
 </div>
 
 <script>
-  // Obtener usuario desde PHP con fetch
+  
   fetch('src/pages/php/getUser.php')
     .then(response => response.json())
     .then(data => {
@@ -174,26 +174,25 @@
         usernameSpan.textContent = data.username;
       } else {
         usernameSpan.textContent = "Invitado";
-        // Puedes descomentar la siguiente línea para redirigir al login si no está logueado
-        // window.location.href = 'login.html';
+      
       }
     })
     .catch(() => {
       document.getElementById('username').textContent = "Error al cargar usuario";
     });
 
-  // Botón cerrar sesión
+  
   document.getElementById('logout-btn').addEventListener('click', () => {
-    // Redirigir a logout.php que destruye sesión y redirige al index.html
+    
     window.location.href = 'src/pages/php/logout.php';
   });
 </script>
-<!--para botones perfil-->
+  
 <script>
   const userProfile = document.getElementById('user-profile');
   const userMenu = document.getElementById('user-menu');
 
-  // Posicionar el menú debajo del icono
+   
   function positionMenu() {
     const rect = userProfile.getBoundingClientRect();
     userMenu.style.top = rect.bottom + window.scrollY + 'px';
@@ -209,7 +208,7 @@
     }
   });
 
-  // Ocultar menú al hacer click fuera
+   
   document.addEventListener('click', (e) => {
     if (!userProfile.contains(e.target) && !userMenu.contains(e.target)) {
       userMenu.style.display = 'none';
@@ -223,19 +222,19 @@
     if (data.username) {
       document.getElementById('username').textContent = data.username;
     } else {
-      // No hay usuario logueado, redirigir a login
+      
       window.location.href = 'login.html';
     }
   })
   .catch(() => {
-    // En caso de error, también redirigimos o mostramos mensaje
+     
     window.location.href = 'login.html';
   });
 
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-  const cliente = 'usuario@example.com'; // Mismo dato que usaste para guardar
+  const cliente = 'usuario@example.com';  
   fetch(`src/pages/php/listar_ordenes.php?cliente=${encodeURIComponent(cliente)}`)
     .then(res => res.json())
     .then(data => {

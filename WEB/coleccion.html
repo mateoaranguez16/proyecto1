@@ -259,7 +259,7 @@
   const userProfile = document.getElementById('user-profile');
   const userMenu = document.getElementById('user-menu');
 
-  // Posicionar el menú debajo del icono
+
   function positionMenu() {
     const rect = userProfile.getBoundingClientRect();
     userMenu.style.top = rect.bottom + window.scrollY + 'px';
@@ -275,7 +275,7 @@
     }
   });
 
-  // Ocultar menú al hacer click fuera
+ 
   document.addEventListener('click', (e) => {
     if (!userProfile.contains(e.target) && !userMenu.contains(e.target)) {
       userMenu.style.display = 'none';
@@ -292,11 +292,11 @@
       const filtro = boton.getAttribute('data-filter');
 
       productos.forEach(producto => {
-        // Si filtro es "todos", mostramos todo
+        
         if (filtro === 'todos') {
           producto.style.display = 'block';
         } else {
-          // Mostramos solo los que tengan la clase que coincide con el filtro
+          
           if (producto.classList.contains(filtro)) {
             producto.style.display = 'block';
           } else {
