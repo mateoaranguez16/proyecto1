@@ -1,4 +1,4 @@
-const chatbotBtn = document.getElementById("chatbot-btn");
+ const chatbotBtn = document.getElementById("chatbot-btn");
 const chatbot = document.getElementById("chatbot");
 const closeChat = document.getElementById("close-chat");
 const sendBtn = document.getElementById("send-btn");
@@ -83,7 +83,6 @@ function botReply(text, options = []) {
                 const reply = opt.split("️⃣")[0] || opt.charAt(0);
                 addMessage(opt, "user");
                 handleReply(reply);
-                Array.from(document.querySelectorAll(".option-btn")).forEach(b => b.remove());
             };
             chatBody.appendChild(btn);
         });
@@ -190,6 +189,7 @@ function handleReply(msg) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    
     const cartIcon = document.getElementById("cart-icon");
     const cartPopup = document.getElementById("cart-popup");
     const cartItemsList = document.getElementById("cart-items");
@@ -200,8 +200,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const costoEnvioEl = document.getElementById("costo-envio");
     const irAPagarBtn = document.getElementById("ir-a-pagar");
 
-    let cart = [];
+   
+    let cart = JSON.parse(localStorage.getItem("cartData")) || []; 
     let envioCosto = 0;
+    updateCartUI(); 
 
     cartIcon.addEventListener("click", () => {
         cartPopup.classList.toggle("hidden");
@@ -220,6 +222,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    function saveCart() {
+        localStorage.setItem("cartData", JSON.stringify(cart));
+    }
+
     function addToCart(name, price, img) {
         const existing = cart.find(item => item.name === name);
         if (existing) {
@@ -228,11 +234,13 @@ document.addEventListener("DOMContentLoaded", () => {
             cart.push({ name, price, img, quantity: 1 });
         }
         updateCartUI();
+        saveCart(); 
     }
 
     function removeFromCart(index) {
         cart.splice(index, 1);
         updateCartUI();
+        saveCart(); 
     }
 
     function formatPrice(price) {
@@ -294,9 +302,8 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(res => res.json())
             .then(data => {
                 if (data.loggedIn) {
-                    localStorage.setItem("carrito", JSON.stringify(cart));
                     localStorage.setItem("direccion", direccionInput.value.trim());
-                    localStorage.setItem("envioCosto", envioCosto);
+                    localStorage.setItem("envioCosto", envioCosto); 
                     window.location.href = "pago.html";
                 } else {
                     window.location.href = "login.html";
@@ -306,5 +313,78 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.error("Error verificando sesión:", err);
                 alert("Hubo un problema al verificar la sesión.");
             });
+    });
+    
+
+    const searchForm = document.querySelector('.search-bar form');
+    const searchInput = document.querySelector('.search-bar input[type="search"]');
+    const productItems = document.querySelectorAll('.gallery .product-item');
+
+    
+    searchForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        performSearch(searchInput.value.trim());
+    });
+    
+    
+    searchInput.addEventListener('input', () => {
+        performSearch(searchInput.value.trim());
+    });
+
+    function performSearch(query) {
+        const lowerCaseQuery = query.toLowerCase();
+
+        productItems.forEach(product => {
+
+            const title = product.querySelector('h3').textContent.toLowerCase();
+            const description = product.querySelector('p:nth-child(3)').textContent.toLowerCase();
+
+            
+            const matches = title.includes(lowerCaseQuery) || description.includes(lowerCaseQuery);
+
+           
+            if (matches || lowerCaseQuery === "") {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+        
+  
+        document.querySelectorAll('.filtros button').forEach(btn => btn.classList.remove('active'));
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+   
+    
+    const botonesFiltro = document.querySelectorAll('.filtros button');
+    const productos = document.querySelectorAll('.gallery .product-item');
+    const searchInput = document.querySelector('.search-bar input[type="search"]');
+
+    botonesFiltro.forEach(boton => {
+        boton.addEventListener('click', () => {
+            const filtro = boton.getAttribute('data-filter');
+            
+           
+            if (searchInput) searchInput.value = '';
+            
+         
+            botonesFiltro.forEach(btn => btn.classList.remove('active'));
+            boton.classList.add('active');
+
+            productos.forEach(producto => {
+                if (filtro === 'todos') {
+                    producto.style.display = 'block';
+                } else {
+                    if (producto.classList.contains(filtro)) {
+                        producto.style.display = 'block';
+                    } else {
+                        producto.style.display = 'none';
+                    }
+                }
+            });
+        });
     });
 });
