@@ -1,0 +1,204 @@
+<?php include("../includes/header.php"); ?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Clothing Brand</title>
+  <link rel="stylesheet" href="../css/contacto.css">
+  <link rel="icon" href="../img/iconopagina.png">
+<link rel="stylesheet" href="/proyecto1_final/assets/css/responsive.css">
+<script src="/proyecto1_final/assets/js/menu.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <nav>
+  <div class="logo">
+    <a href="index.php"><img src="../img/iconopagina.png" alt="Logo de la marca"></a>
+  </div>
+
+  <!-- Menú hamburguesa para móviles -->
+  <div class="hamburger" id="hamburger">☰</div>
+
+  <!-- Menú de navegación -->
+  <div class="nav-links" id="nav-links">
+    <ul>
+      <li><a href="index.php">Inicio</a></li>
+      <li><a href="coleccion.php">Colección</a></li>
+      <li><a href="nosotros.php">Nosotros</a></li>
+      <li><a href="contacto.php">Contacto</a></li>
+    </ul>
+  </div>
+
+  <!-- Barra de búsqueda -->
+  <div class="search-bar">
+    <form action="#" method="get">
+      <input type="search" placeholder="Buscar productos..." name="search">
+      <button id="button-search" type="submit"><img src="../img/iconobuscar.png" alt="" width="20"></button>
+    </form>
+  </div>
+
+  <!-- Iconos de usuario y carrito -->
+  <div class="nav-icons">
+    <div id="user-profile">
+      <img src="../img/perfil.png" alt="Perfil" width="28" title="Perfil de usuario">
+    </div>
+    <div id="user-menu" style="display:none; position:absolute; background:#fff; border:1px solid #ccc; padding:10px; box-shadow:0 2px 5px rgba(0,0,0,0.2); z-index:100;">
+      <ul style="list-style:none; margin:0; padding:0;">
+        <li><a href="perfil.php" style="text-decoration:none; color:#333; display:block; padding:5px 10px;">Perfil</a></li>
+        <li><a href="src/pages/php/logout.php" style="text-decoration:none; color:#333; display:block; padding:5px 10px;">Cerrar sesión</a></li>
+      </ul>
+    </div>
+    <div id="cart-icon">
+      <img src="../img/carritodecompras.png" alt="Carrito de compras" width="28" title="Carrito">
+      <span id="cart-count">0</span>
+    </div>
+  </div>
+</nav>
+  </header>
+
+  <section id="contacto-page">
+    <h1>Contáctanos</h1>
+    <p>Estamos aquí para ayudarte. Escríbenos por correo, llámanos o visítanos en nuestra tienda.</p>
+
+    <div class="contact-info">
+      <div class="info-box">
+        <h3>📞 Teléfono</h3>
+        <p>+54 11 4567-8900</p>
+      </div>
+      <div class="info-box">
+        <h3>📧 Email</h3>
+        <p><a href="mailto:info@marcaropa.com">info@marcaropa.com</a></p>
+      </div>
+      <div class="info-box">
+        <h3>📍 Ubicación</h3>
+        <p>Av. Siempre Viva 742, Buenos Aires</p>
+      </div>
+    </div>
+
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.002595324593!2d-58.38155968477177!3d-34.60368498045983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac9f0c6fbed%3A0x3e4b6e5b1f7a9e!2sBuenos%20Aires%20Obelisco!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar"
+        width="100%" height="400" style="border:0;" allowfullscreen loading="lazy"></iframe>
+    </div>
+
+    <div class="form-container">
+      <h2>Envíanos un mensaje</h2>
+      <form action="mailto:info@marcaropa.com" method="post" enctype="text/plain">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu email" required>
+        <input type="text" name="asunto" placeholder="Asunto" required>
+        <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col brand-info">
+        <img src="../img/iconopagina.png" alt="Logo de la marca" class="footer-logo">
+        <p>Elegancia y estilo en cada prenda. Inspirados en la autenticidad, diseñamos ropa para destacar tu personalidad.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Enlaces rápidos</h3>
+        <ul>
+          <li><a href="index.php#inicio">Inicio</a></li>
+          <li><a href="index.php#coleccion">Colección</a></li>
+          <li><a href="index.php#nosotros">Nosotros</a></li>
+          <li><a href="contacto.php">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Atención al cliente</h3>
+        <ul>
+          <li><a href="#">Preguntas frecuentes</a></li>
+          <li><a href="#">Envíos y devoluciones</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Conéctate con nosotros</h3>
+        <div class="social-icons">
+          <a href="#"><img src="../img/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="../img/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="../img/twitter.png" alt="Twitter"></a>
+        </div>
+        <p class="footer-mail">📧 info@marcaropa.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Marca Ropa. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <div id="chatbot-btn">💬</div>
+  <div id="chatbot">
+    <div class="chat-header">
+      <span>Asistente Virtual</span>
+      <button id="close-chat">✖</button>
+    </div>
+    <div class="chat-body" id="chat-body"></div>
+    <div class="chat-footer">
+      <input type="text" id="user-input" placeholder="Escribe aquí..." />
+      <button id="send-btn">➤</button>
+    </div>
+  </div>
+
+  <div id="cart-popup" class="hidden">
+    <h3>🛒 Carrito de Compras</h3>
+    <ul id="cart-items"></ul>
+
+    <div class="envio-section">
+      <label for="direccion">Dirección de envío:</label>
+      <input type="text" id="direccion" placeholder="Ingresa tu dirección">
+      <button id="calcular-envio">Calcular envío</button>
+      <p id="costo-envio">Costo de envío: $0</p>
+    </div>
+
+    <p>Total: <span id="cart-total">$0</span></p>
+    <button id="ir-a-pagar">Ir a pagar</button>
+  </div>
+
+  <script src="../js/scripts.js"></script>
+  <script>
+    const userProfile = document.getElementById('user-profile');
+    const userMenu = document.getElementById('user-menu');
+
+    function positionMenu() {
+      const rect = userProfile.getBoundingClientRect();
+      userMenu.style.top = rect.bottom + window.scrollY + 'px';
+      userMenu.style.left = rect.left + window.scrollX + 'px';
+    }
+
+    userProfile.addEventListener('click', () => {
+      userMenu.style.display = (userMenu.style.display === 'block') ? 'none' : (positionMenu(), 'block');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!userProfile.contains(e.target) && !userMenu.contains(e.target)) {
+        userMenu.style.display = 'none';
+      }
+    });
+  </script>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
+  // Opcional: cerrar menú al hacer clic en un enlace
+  const links = navLinks.querySelectorAll('a');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('show');
+    });
+  });
+</script>
+
+</body>
+</html>
+<?php include("../includes/footer.php"); ?>
